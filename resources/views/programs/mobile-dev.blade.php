@@ -103,7 +103,7 @@
                             <div class="col-md-6"><p class="lead text-center">200,000</p></div>
                         </div>
                     </div>
-                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">Apply Now!</button>
+                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple"><a href="/payment/mobile-dev">Apply Now!</a></button>
                 </div>
             </div>
         </div>

@@ -12,37 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script defer src="../../font-awesome/fontawesome-free-5.12.1-web/js/all.js"></script>
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    {{-- <script>
-
-        let input = document.querySelector('#input');
-        
-        input.addEventListener('change', function(){
-            console.log(this.value);
-            let fe_display = document.querySelector('.frontend');
-            let be_display = document.querySelector('.backend');
-            let both_display = document.querySelector('.both');
-
-            if (this.value == 'frontend') {
-                fe_display.style.display = 'block';
-                be_display.style.display = 'none';
-                both_display.style.display = 'none';
-            } else if(this.value == 'backend'){
-                fe_display.style.display = 'none';
-                be_display.style.display = 'block';
-                both_display.style.display = 'none'
-            } else if(this.value == 'both'){
-                both_display.style.display = 'block'
-                fe_display.style.display = 'none';
-                be_display.style.display = 'none';
-            } else {
-                both_display.style.display = 'none'
-                fe_display.style.display = 'none';
-                be_display.style.display = 'none';
-            }
-        });
-   
-    </script> --}}
+    {{-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -106,42 +76,16 @@
             </div>
         </nav>
 
-        {{-- @extends('include.navbar') --}}
-
-        {{-- <nav class="navbar navbar-expand-lg fixed-top nav-menu">
-            <a href="#" class="navbar-brand text-uppercase text-light">
-                <span class="h2 font-weight-bold">findworka</span><span class="h1"> academy</span>
-            </a>
-            <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <div class="bg-light line1"></div>
-                <div class="bg-light line2"></div>
-                <div class="bg-light line3"></div>
-            </button>
-            <div class="collapse navbar-collapse text-uppercase justify-content-end font-weight-bold" id="myNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link m-2 menu-item nav-active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu-item">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu-item">login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu-item">register</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> --}}
-{{-- 
-        @yield('header') --}}
-
         <main class="">
             @yield('content')
         </main>
 
-        <footer class="px-5">
+
+        @yield('pagescript')
+
+        {{-- @include('include.footer') --}}
+
+        {{-- <footer class="px-5">
             <div class="container-fluid">
                 <div class="row py-4 text-white">
                     <div class="col-lg-4 col-sm-6">
@@ -210,39 +154,8 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
 
     </div>
-
-    {{-- <script>
-
-        let input = document.querySelector('#input');
-        
-        input.addEventListener('change', function(){
-            console.log(this.value);
-            let fe_display = document.querySelector('.frontend');
-            let be_display = document.querySelector('.backend');
-            let both_display = document.querySelector('.both');
-
-            if (this.value == 'frontend') {
-                fe_display.style.display = 'block';
-                be_display.style.display = 'none';
-                both_display.style.display = 'none';
-            } else if(this.value == 'backend'){
-                fe_display.style.display = 'none';
-                be_display.style.display = 'block';
-                both_display.style.display = 'none'
-            } else if(this.value == 'both'){
-                both_display.style.display = 'block'
-                fe_display.style.display = 'none';
-                be_display.style.display = 'none';
-            } else {
-                both_display.style.display = 'none'
-                fe_display.style.display = 'none';
-                be_display.style.display = 'none';
-            }
-        });
-   
-    </script> --}}
 </body>
 </html>

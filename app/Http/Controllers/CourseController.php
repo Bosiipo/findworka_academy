@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Courses;
 
 class CourseController extends Controller
 {
@@ -13,7 +14,13 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        $courses = Courses::all();
+
+        $data = [
+            'courses' => $courses
+        ];
+
+        return view('admin.course.index', $data);
     }
 
     /**
@@ -23,7 +30,13 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        $courses = Courses::all();
+
+        $data = [
+            'courses' => $courses
+        ];
+
+        return view('admin.course.create', $data);
     }
 
     /**
@@ -34,7 +47,24 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+            'price' => 'required',
+        ]);
+
+        $course = new Courses;
+        // $courses = Courses::all();
+
+        $course->name = $request['name'];
+        $course->description = $request['description'];
+        $course->content = $request['content'];
+        $course->price = $request['price'];
+        $course->program_id = 5;
+        $course->save();
+
+        return redirect('/admin/courses');
     }
 
     /**
@@ -56,7 +86,13 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Courses::where('id', $id)->first();
+
+        $data = [
+            'course' => $course
+        ];
+
+        return view('admin.course.edit', $data);
     }
 
     /**
@@ -68,7 +104,24 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $course = Courses::find($id);
+
+
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+            'price' => 'required',
+        ]);
+
+        $course->name = $request['name'];
+        $course->description = $request['description'];
+        $course->content = $request['content'];
+        $course->price = $request['price'];
+        $course->save();
+
+        return redirect('/admin/courses');
     }
 
     /**
@@ -79,6 +132,10 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $course = Courses::find($id);
+
+        $course->delete();
+
+        return redirect('/admin/courses');
     }
 }

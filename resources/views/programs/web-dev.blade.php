@@ -31,7 +31,7 @@
                     <option value>Select</option>
                     <option id="frontend" value="frontend">Frontend</option>
                     <option id="backend" value="backend">Backend</option>
-                    <option id="both" value="both">Both</option>
+                    <option id="both" value="both">Full-stack</option>
                 </select>
             </div>
             <div class="col-lg-4"></div>
@@ -132,10 +132,12 @@
                     <div class="card mt-3 card-shadow-web">
                         <div class="row p-3">
                             <div class="col-md-6"><p class="lead">Price</p></div>
-                            <div class="col-md-6"><p class="lead text-center">300,000</p></div>
+                            <div class="col-md-6"><p class="lead text-center">150,000</p></div>
                         </div>
                     </div>
-                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">Apply Now!</button>
+                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
+                        <a class="text-decoration-none text-white" href="/payment/front-end">Apply Now!</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -145,19 +147,19 @@
                     <h3 class="mt-3 font-weight-bold">Description</h3>
                     <p class="small">
                         Back-end web development involves learning how to develop 
-                        websites and applications, interact with data and convert data 
+                        server-side applications, interact with a database and convert data it's
                         to graphical interface for users to view using web technologies 
                         which run on the Open Web Platform or act as compilation input for 
                         non-web platform environments.
                     </p>
                     <h3 class="mt-3 font-weight-bold">What you'll learn</h3>
                     <ul>
-                        <li class="m-3 small">HTML5 & CSS</li>
-                        <li class="m-3 small">CSS Framework: Bootstrap</li>
-                        <li class="m-3 small">JavaScript</li>
-                        <li class="m-3 small">Object Oriented Programming (OOP)</li>
-                        <li class="m-3 small">Introduction to React</li>
-                        <li class="m-3 small">Git and Commandline</li>
+                        <li class="m-3 small">PHP</li>
+                        <li class="m-3 small">Laravel</li>
+                        <li class="m-3 small">MySQL</li>
+                        <li class="m-3 small">NodeJS</li>
+                        <li class="m-3 small">MongoDB</li>
+                        {{-- <li class="m-3 small"></li> --}}
                         <li class="m-3 small">And finally build a complete website</li>
                     </ul>
                     <h3 class="mt-4 font-weight-bold">Requirement</h3>
@@ -235,10 +237,12 @@
                     <div class="card mt-3 card-shadow-web">
                         <div class="row p-3">
                             <div class="col-md-6"><p class="lead">Price</p></div>
-                            <div class="col-md-6"><p class="lead text-center">300,000</p></div>
+                            <div class="col-md-6"><p class="lead text-center">150,000</p></div>
                         </div>
                     </div>
-                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">Apply Now!</button>
+                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
+                        <a class="text-decoration-none text-white" href="/payment/back-end">Apply Now!</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -261,6 +265,11 @@
                         <li class="m-3 small">Object Oriented Programming (OOP)</li>
                         <li class="m-3 small">Introduction to React</li>
                         <li class="m-3 small">Git and Commandline</li>
+                        <li class="m-3 small">PHP</li>
+                        <li class="m-3 small">Laravel</li>
+                        <li class="m-3 small">MySQL</li>
+                        <li class="m-3 small">NodeJS</li>
+                        <li class="m-3 small">MongoDB</li>
                         <li class="m-3 small">And finally build a complete website</li>
                     </ul>
                     <h3 class="mt-4 font-weight-bold">Requirement</h3>
@@ -341,7 +350,9 @@
                             <div class="col-md-6"><p class="lead text-center">300,000</p></div>
                         </div>
                     </div>
-                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">Apply Now!</button>
+                    <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
+                        <a class="text-decoration-none text-white" href="/payment/full-stack">Apply Now!</a>
+                    </button>
                 </div>
             </div>
         </div>

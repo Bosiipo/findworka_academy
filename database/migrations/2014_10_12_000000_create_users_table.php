@@ -20,9 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image')->nullable();
             $table->boolean('suspend')->default(false);
-            $table->unsignedBigInteger('privilege_id')->default(1);
-            $table->foreign('privilege_id')->references('id')->on('privileges')->onDelete('cascade')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->integer('privilege_id')->default(1);
+            // $table->unsignedBigInteger('courses_id')->references('id')->on('courses')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
