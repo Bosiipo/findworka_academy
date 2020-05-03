@@ -122,7 +122,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple"><a href="/payment/product-design">Apply Now!</a></button>
+                <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
+                    <a class="text-decoration-none text-white" href="/payment/6">Apply Now!</a>
+                </button>
             </div>
         </div>
     </div>

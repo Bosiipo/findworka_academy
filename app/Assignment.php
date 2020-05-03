@@ -11,7 +11,7 @@ class Assignment extends Model
         return $this->belongsToMany(User::class);
     }
 
-    public function submission()
+    public function submissions()
     {
         return $this->hasMany(Submission::class);
     }

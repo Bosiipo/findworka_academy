@@ -12,18 +12,6 @@
         <div class="row justify-content-center">
             <h3>What course do you want to offer?</h3>
         </div>
-        {{-- <div class="row justify-content-center">
-            <div class="dropdown mt-3">
-                <button class="btn btn-outline dropdown-toggle dropdown-form" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Select</a></li>
-                  <li><a class="dropdown-item" href="#">Front-end Development</a></li>
-                  <li><a class="dropdown-item" href="#">Back-end Development</a></li>
-                  <li><a class="dropdown-item" href="#">Full-stack Development</a></li>
-                </ul>
-              </div>
-        </div> --}}
         <div class="row">
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
@@ -136,7 +124,7 @@
                         </div>
                     </div>
                     <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
-                        <a class="text-decoration-none text-white" href="/payment/front-end">Apply Now!</a>
+                        <a class="text-decoration-none text-white" href="{{ url('/payment/1')}}">Apply Now!</a>
                     </button>
                 </div>
             </div>
@@ -241,7 +229,7 @@
                         </div>
                     </div>
                     <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
-                        <a class="text-decoration-none text-white" href="/payment/back-end">Apply Now!</a>
+                        <a class="text-decoration-none text-white" href="/payment/2">Apply Now!</a>
                     </button>
                 </div>
             </div>
@@ -351,7 +339,7 @@
                         </div>
                     </div>
                     <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
-                        <a class="text-decoration-none text-white" href="/payment/full-stack">Apply Now!</a>
+                        <a class="text-decoration-none text-white" href="/payment/3">Apply Now!</a>
                     </button>
                 </div>
             </div>

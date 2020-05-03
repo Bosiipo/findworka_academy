@@ -20,7 +20,7 @@
                       <tr>
                         <th scope="col">Name</th>
                         <th scope="col">E-mail</th>
-                        {{-- <th scope="col">Course</th> --}}
+                        <th scope="col">Course</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -28,15 +28,14 @@
                             <tr>
                                 <td>{{$student->name}}</td>
                                 <td>{{$student->email}}</td>
-                                {{-- dd({{$student->courses}}); --}}
-                                {{-- @if($student->courses->where('id', $course->id)->count() > 0)
+                                @if(count($student->courses) > 0)
                                     @foreach ($student->courses as $course)
-                                
-                                        <td>{{$course->name}}</td>
+                                        <td class="font-weight-bold">{{$course->name}}</td>
                                     @endforeach
                                     @else
-                                        <td>Yet to pay and register</td>
-                                @endif --}}
+                                        <td class="font-weight-bold">Yet to pay and register!</td>
+                                @endif
+
                                 
                                 
                             </tr>

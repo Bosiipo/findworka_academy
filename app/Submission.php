@@ -8,7 +8,7 @@ class Submission extends Model
 {
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)->withPivot('assignment_id', 'status');
     }
 
     public function assignment()

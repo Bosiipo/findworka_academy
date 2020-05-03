@@ -104,14 +104,12 @@
                         </div>
                     </div>
                     <button class="btn text-white btn-block mt-3 font-weight-bold" style="background-color:purple">
-                        <a class="text-decoration-none" href="/payment/data-science">Apply Now!</a>
+                        <a class="text-decoration-none text-white" href="/payment/5">Apply Now!</a>
                     </button>
                 </div>
             </div>
         </div>
 
     </div>
-
-    
 
 @endsection

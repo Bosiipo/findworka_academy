@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Courses;
+use App\Assignment;
+use DB;
+use App\Submission;
 
 class TutorController extends Controller
 {
@@ -15,16 +18,16 @@ class TutorController extends Controller
      */
     public function index()
     {
-        // dd($students);
+        // $tutor = auth()->user()->courses()->first()->name;
 
-        // $courses = Courses::all();
+        // $assignments = Assignment::where('course', $tutor)->get();
+        // dd($assignments);
 
         // $data = [
-        //     'students' => $students,
-        //     'courses' => $courses
+        //     'assignments' => $assignments
         // ];
 
-        return view('tutor.dashboard');
+        // return view('tutor.dashboard');
     }
 
     /**
@@ -147,10 +150,6 @@ class TutorController extends Controller
         // ];
 
         return view('tutor.create', $data);
-
-        // $old_roles = $user->roles()->get();
-
-        // $new_roles = request()->get('roles');
     }
 
     /**
@@ -196,15 +195,44 @@ class TutorController extends Controller
 
     public function viewStudents()
     {
-        $students = User::where('privilege_id', 1)->get();
+        $students = User::where('privilege_id', 1)->paginate(10);
 
-        $courses = Courses::all();
+        $tutor = auth()->user()->courses()->get();
 
         $data = [
             'students' => $students,
-            'courses' => $courses
+            'tutor' => $tutor
         ];
 
         return view('tutor.student.index', $data);
     }
+
+    public function viewSubmissions($id)
+    {
+        $student = User::find($id);
+        // dd($student->submissions());
+
+        $submissions = $student->submissions()->get();
+        // dd($submissions);
+
+
+        // $tutor = auth()->user()->courses()->get();
+
+        $data = [
+            'student' => $student,
+            'submissions' => $submissions
+        ];
+
+        return view('tutor.student.submissions', $data);
+    }
+
+    // public function downloadAssignment($id)
+    // {
+
+    //     $submission_file = Submission::find($id)->file;
+
+    //     $pathToFile = public_path('storage/submissions/') . $submission_file;
+
+    //     return response()->download($pathToFile);
+    // }
 }

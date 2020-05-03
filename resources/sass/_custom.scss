@@ -9,6 +9,7 @@ header {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
         url(../views/images/background2.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
 }
 
 /* navbar */
@@ -76,8 +77,8 @@ header {
     width: 70%;
     font-size: 14px;
     letter-spacing: 1px;
-    opacity: .7;
-    transition: all .5s;
+    opacity: 0.7;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
@@ -103,7 +104,7 @@ footer h5 {
 .footer-link {
     color: #eee;
     font-size: 13px;
-    transition: all, .3s;
+    transition: all, 0.3s;
 }
 
 .footer-link:hover {
@@ -129,35 +130,6 @@ footer h5 {
 .what-do-you-want-to-offer {
     margin: 80px;
 }
-
-// .dropdown-form {
-//     border: 1px solid black;
-//     width: 360px;
-// }
-
-// .dropdown-menu {
-//     // border: 1px solid black;
-//     width: 360px;
-// }
-
-// .dropdown-item {
-//     padding-left: 25px;
-//     color: black;
-// }
-
-// .dropdown-item:hover {
-//     color: white;
-//     background-color: purple;
-//     text-decoration: none;
-// }
-
-// .inv {
-//     display: none;
-// }
-
-// .vis {
-//     display: block;
-// }
 
 .data-science {
     height: 50vh;
@@ -206,8 +178,7 @@ footer h5 {
 
 .sidebar {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.4));
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -215,90 +186,66 @@ footer h5 {
     // url(../images/img1.jpeg)
 }
 
-
 /* end of footer */
 
-// .menu-item {
-//     font-size: 13px;
-//     letter-spacing: 1px;
-//     color: #eee;
-//     transition: color 0.5s;
-// }
-
-// .menu-item:hover {
-//     color: #70aed2;
-// }
-
-// .nav-active {
-//     color: #70aed2;
-// }
-
-// .line1,
-// .line2,
-// .line3 {
-//     width: 23px;
-//     height: 2px;
-//     margin: 5px;
-//     transition: all 0.4s;
-// }
-
-// .change .line1 {
-//     transform: rotate(-45deg) translate(-5px, 6px);
-// }
-
-// .change .line2 {
-//     opacity: 0;
-// }
-
-// .change .line3 {
-//     transform: rotate(45deg) translate(-5px, -6px);
-// }
-
-// .custom-navbar {
-//     padding: 5px 30px;
-//     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
-// }
-
-// /* end of navbar */
-
-// /* banner */
-
-// /* centers the banner completely */
-// .banner {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width: 80%;
-// }
-// /* end */
-
-// .banner-heading {
-//     animation-name: anim;
-//     animation-duration: 0.7s;
-// }
-
-// .banner-par {
-//     animation-name: anim;
-//     animation-duration: 0.7s;
-//     animation-delay: 0.5s;
-//     animation-fill-mode: backwards;
-// }
-
-// @keyframes anim {
-//     0% {
-//         transform: translateX(-100px);
-//         opacity: 0;
-//     }
-
-//     100% {
-//         transform: translateX(0px);
-//         opacity: 1;
-//     }
-// }
-/* end of banner */
 
 /* end of header */
 .submit-button {
     margin-top: 10px;
+}
+
+
+.background-assignment {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(../views/images/assignment.jpg) no-repeat center center / cover;
+}
+
+.background-student {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url(../views/images/student.jpg) no-repeat center center / cover;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.sidemenu {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        no-repeat center center / cover;
+}
+
+.b-l {
+    padding-right: 20px;
+    border-left: 3px solid green;
+}
+
+
+.student-course {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url(../views/images/course.jpg) no-repeat center center / cover;
+}
+
+.background-payment {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url(../views/images/background.jpg) no-repeat center center / cover;
 }

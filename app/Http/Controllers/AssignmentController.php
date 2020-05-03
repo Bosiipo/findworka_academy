@@ -17,8 +17,9 @@ class AssignmentController extends Controller
      */
     public function index()
     {
+        $tutor = auth()->user()->courses()->first()->name;
 
-        $assignments = Assignment::all();
+        $assignments = Assignment::where('course', $tutor)->get();
 
         $data = [
             'assignments' => $assignments
@@ -56,10 +57,16 @@ class AssignmentController extends Controller
         $assignment = new Assignment;
         // $courses = request()->get('course');
 
+        $course = $request->get('course');
+        $tutor->courses()->attach($course);
+
         $assignment->title = $request['title'];
-        $assignment->content = $request['content'];
+        // $assignment->content = $request->file('assignment')->store('upload');
         $assignment->course = $request['course'];
+        $assignment->content = $request['content'];
         $assignment->save();
+
+
 
         return redirect('/tutor/assignments');
     }

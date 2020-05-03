@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-bottom:100px;">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" style="margin-top: 90px; margin-left: 130px;">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 

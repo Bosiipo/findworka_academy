@@ -8,6 +8,7 @@ use App\Assignment;
 // use App\Programs;
 use App\Courses;
 use App\Submission;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -117,8 +118,15 @@ class StudentController extends Controller
 
     public function viewAssignments()
     {
-        $assignments = Assignment::all();
+        $user_course = auth()->user()->courses()->first()->name;
+
+        $assignments = Assignment::where('course', $user_course)->get();
+
+        // dd(count($assignments));
+
         $submissions = Submission::all();
+
+        $user = auth()->user();
 
         $data = [
             'assignments' => $assignments,
@@ -137,5 +145,35 @@ class StudentController extends Controller
         ];
 
         return view('student.assignment.view', $data);
+    }
+
+    public function viewCourse()
+    {
+        $user = auth()->user();
+        $user_course = $user->courses()->first();
+
+        $data = [
+            'course' => $user_course
+        ];
+
+        return view('student.course.about', $data);
+    }
+
+    public function viewSubmissions()
+    {
+        $user = Auth::user();
+
+        $submissions = $user->submissions()->get();
+        // dd($submissions);
+
+
+        // $tutor = auth()->user()->courses()->get();
+
+        $data = [
+            'user' => $user,
+            'submissions' => $submissions
+        ];
+
+        return view('student.submission.index', $data);
     }
 }

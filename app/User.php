@@ -44,8 +44,23 @@ class User extends Authenticatable
         return $this->belongsToMany(Courses::class);
     }
 
-    public function submissions()
+    public function assignments()
     {
         return $this->belongsToMany(Assignment::class);
+    }
+
+    public function submissions()
+    {
+        return $this->belongsToMany(Submission::class)->withPivot('assignment_id', 'status');
+    }
+
+    // public function payments()
+    // {
+    //     return $this->hasManyThrough(Payment::class, CourseUser::class, 'user_id', 'id');
+    // }
+
+    public function payments()
+    {
+        return $this->belongsToMany(Payment::class)->withPivot('payment_status_id');
     }
 }

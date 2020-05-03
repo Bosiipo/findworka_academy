@@ -27,22 +27,65 @@ $(function(){
     });
 });
 
-$(function(){
-  let input = document.querySelector('#input');
+// $(function(){
+//   let input = document.querySelector('#input');
       
-  input.addEventListener('change', function(){
-    let f_amount = document.querySelector('.f_amount');
-    let i_amount = document.querySelector('.i_amount');
+//   input.addEventListener('change', function(){
+//     let f_amount = document.querySelector('.f_amount');
+//     let i_amount = document.querySelector('.i_amount');
 
-    if (this.selectedIndex === 1) {
-        f_amount.style.display = 'block';
-        i_amount.style.display = 'none';
-    } else if(this.selectedIndex === 2){
-        f_amount.style.display = 'none';
-        i_amount.style.display = 'block';
-    } else {
-        f_amount.style.display = 'none'
-        i_amount.style.display = 'none';
-    }
+//     if (this.selectedIndex === 1) {
+//         f_amount.style.display = 'block';
+//         i_amount.style.display = 'none';
+//     } else if(this.selectedIndex === 2){
+//         f_amount.style.display = 'none';
+//         i_amount.style.display = 'block';
+//     } else {
+//         f_amount.style.display = 'none'
+//         i_amount.style.display = 'none';
+//     }
+//   });
+// });
+
+/*
+  Slidemenu
+*/
+(function() {
+	var $body = document.body
+	, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+	if ( typeof $menu_trigger !== 'undefined' ) {
+		$menu_trigger.addEventListener('click', function() {
+			$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+		});
+	}
+
+}).call(this);
+
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
   });
-});
+
+// $(function(){
+//     let input = document.querySelector('#input');
+        
+//     input.addEventListener('change', function(){
+//       let paystack_amount = document.querySelector('.paystack_amount');
+//     //   let  = document.querySelector('.i_amount');
+  
+//       if (this.selectedIndex === 1) {
+//         paystack_amount.display = 'block';
+//         paystack_amount.value = 
+//         // <input class="paystack_amount" type="hidden" name="amount" value="{{$course->price}}00">
+//         //   f_amount.style.display = 'block';
+//         //   i_amount.style.display = 'none';
+//       } else if(this.selectedIndex === 2){
+//           f_amount.style.display = 'none';
+//           i_amount.style.display = 'block';
+//       } else {
+//           f_amount.style.display = 'none'
+//           i_amount.style.display = 'none';
+//       }
+//     });
+// });

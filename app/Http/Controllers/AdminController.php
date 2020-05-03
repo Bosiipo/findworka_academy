@@ -168,6 +168,10 @@ class AdminController extends Controller
             'students' => $students
         ];
 
+        // foreach ($students as $student) {
+        //     dd($student->courses);
+        // };
+
         return view('admin.tutor.viewStudents', $data);
     }
 
@@ -227,6 +231,38 @@ class AdminController extends Controller
         $tutor->delete();
 
         return redirect('/admin/tutors');
+    }
+
+    public function storeTutor(Request $request)
+    {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'course' => 'required',
+            'password' => 'required',
+        ]);
+
+        $tutor = new User;
+        $courses = Courses::all();
+
+        $tutor->name = $request['name'];
+        $tutor->email = $request['email'];
+        $tutor->password = \Hash::make($request['password']);
+        $tutor->privilege_id = 2;
+        $tutor->save();
+
+        $course = $request->get('course');
+        $tutor->courses()->attach($course);
+
+
+        $students = User::where('privilege_id', '1');
+
+        $data = [
+            'students' => $students
+        ];
+
+        return redirect('/admin');
     }
 
 

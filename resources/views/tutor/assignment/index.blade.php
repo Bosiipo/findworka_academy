@@ -1,33 +1,44 @@
-@extends('layouts.app')
+@extends('layouts.other')
 
 @section('content')
 
-    <div class="container mt-5 mb-5" style="">
-        <div class="row justify-content-center">
+    <div class="d-flex" id="wrapper">
+        @if (session('error'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+        @endif
 
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header font-weight-bold bg-dark text-white">Dashboard</div>
-                    <div class="card-body">
-                        @include('tutor.include.sidemenu')      
-                    </div>
+        @include('tutor.include.sidemenu')
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-md navbar bg-dark shadow-sm">
+                <button class="btn btn-primary" id="menu-toggle">Dashboard</button>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <a class="text-decoration-none text-white font-weight-bold navbar-brand" href="{{ url('/') }}">
+                        Findworka Academy
+                    </a>
+                </ul>
+
                 </div>
-            </div>
+            </nav>
 
-            <div class="col-md-9">
-                {{-- <div class="card">
-                    <div class="card-header">List of assignments</div>
-
-                    <div class="card-body"> --}}
+            <div class="container-fluid course_page">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 m-5">                
                         <table class="table">
                             <thead class="thead-dark">
                             <tr>
-                                {{-- <th scope="col">ID</th> --}}
                                 <th scope="col">Assignment Title</th>
                                 <th scope="col">Course</th>
                                 <th scope="col">Action</th>
-                                {{-- <th scope="col">Role</th>
-                                <th scope="col">Action</th> --}}
                             </tr>
                             </thead>
                             <tbody>
@@ -44,13 +55,12 @@
                                             </button>
                                         </td>
                                     </tr>
-                                @endforeach
-                            
+                                @endforeach                    
                             </tbody>
                         </table>
-                    {{-- </div>
-                </div> --}}
-            </div>
+                    </div>
+                </div>
+            </div>   
         </div>
     </div>
 
