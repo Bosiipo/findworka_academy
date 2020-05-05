@@ -14,8 +14,9 @@
 <h1>Installation</h1>
 
 <ul>
-    git clone https://github.com/bosiipo/findworka-academy.git
-
+    
+    git clone https://github.com/bosiipo/findworka_academy.git
+    
     cd file
 
     composer install
