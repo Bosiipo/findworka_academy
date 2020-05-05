@@ -14,7 +14,7 @@
 <h1>Installation</h1>
 
 <ul>
-    git clone https://github.com/samson1998/fw-project.git
+    git clone https://github.com/bosiipo/findworka-academy.git
 
     cd file
 
