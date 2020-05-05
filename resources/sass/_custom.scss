@@ -12,6 +12,7 @@ header {
     background-attachment: fixed;
 }
 
+
 /* navbar */
 .nav-menu {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
@@ -26,13 +27,21 @@ header {
     width: 80%;
 }
 
-.btn-1 {
+.get-started-button {
     padding-left: 36px;
     padding-right: 36px;
     background: black;
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
+    // width: 130px;
+    box-shadow: 5px 8px 18px #000;
+    translate: all .2s;
+}
+
+.get-started-button:hover {
+    background: #f9793d;
+    transform: translateY(-3px);
 }
 
 .btn-2 {
@@ -249,3 +258,94 @@ footer h5 {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(../views/images/background.jpg) no-repeat center center / cover;
 }
+
+.what {
+    // height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url(../views/images/what.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+}
+
+/* mission */
+.mission {
+    background: #151f20;
+}
+
+/* title */
+
+/* end of title */
+
+.underline {
+    width: 200px;
+    border: 3px solid #eee;
+    margin: auto;
+}
+
+.fromLeft {
+    animation-name: fromLeft;
+    animation-duration: 3s;
+}
+
+.fromRight {
+    animation-name: fromRight;
+    animation-duration: 3s;
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* end of mission */
+
+/* courses */
+.card-shadow {
+    box-shadow: 2px 5px 20px #444;
+}
+
+.heading {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: #222;
+    width: 70%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: .7;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.heading:hover {
+    opacity: 1;
+}
+
+
+/* end of courses */
+
+// /* Customer section */
+// .customers {
+//     background: #151f20;
+// }
+
+// /* End of Customer section */

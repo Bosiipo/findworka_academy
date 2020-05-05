@@ -1,7 +1,7 @@
  <footer class="px-5">
             <div class="container-fluid">
                 <div class="row py-4 text-white">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-6 col-sm-6">
                         <h5 class="pb-3">About Us</h5>
                         <h6>Findworka is the future of digital work.</h6>
                         <p class="small">
@@ -11,7 +11,7 @@
                             project management and productivity tools that they need to build 
                             mission-critical solutions.</p>
                     </div>
-                    <div class="col-lg-2 col-sm-6">
+                    <div class="col-lg-6 col-sm-6 text-right">
                         <h5 class="pb-3">Contact</h5>
                         <ul class="list-unstyled">
                             <li>
@@ -25,41 +25,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <h5 class="pb-3">Community</h5>
-                        <ul class="list-inline pt-3">
-                            <li class="list-inline-item">
-                                <i class="fas fa-camera"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="fab fa-google-plus text-danger fa-3x"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="fab fa-twitter text-info fa-3x"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="fab fa-instagram text-info fa-3x"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="fab fa-youtube text-danger fa-3x"></i>
-                            </li>
-                        <ul>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <h5 class="pb-3">Stay Connected</h5>
-                        <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Laborum ipsa ad quas, impedit nobis doloremque dolores assumenda provident odio deleniti.</p>
-                        <form>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
-                                <div class="input-group-append">
-                                    <button class="btn btn-danger text-uppercase font-weight-bold">sign up!</button>
-                                </div>
-                            </div>
-                        </form>
-                        
-                    </div>
-                    
                 </div>
                 <div class="row">
                     <div class="col text-center text-light border-top pt-3">

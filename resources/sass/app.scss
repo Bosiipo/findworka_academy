@@ -1,16 +1,20 @@
+$fa-font-path: "../webfonts";
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // Custom CSS
-@import 'custom';
+@import "custom";
 
-@import 'sidebar';
+@import "sidebar";
 
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
 
 // @import url('https://fonts.googleapis.com/css?family=Oxygen:400, 700');
