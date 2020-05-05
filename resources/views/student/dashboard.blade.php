@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row">
-        <div class="col-lg-12 col-sm-4">
+        <div class="col-md-12 col-sm-4">
             <h1 class="d-flex justify-content-end p-5">Welcome, {{Auth::user()->name}}</h1> 
             <section class="p-5">
                 <div class="row justify-content-start">
@@ -63,8 +63,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                </div>
+            </section>
         </div>   
     </div>
 @endsection
