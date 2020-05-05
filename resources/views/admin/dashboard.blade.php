@@ -23,6 +23,7 @@
                         <th scope="col" class="text-center">E-mail</th>
                         <th scope="col" class="text-center">Role</th>
                         <th scope="col" class="text-center">Action</th>
+                        <th scope="col" class="text-center">Course</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -38,7 +39,12 @@
                                     @elseif($user->privilege_id == '3')
                                         <td class="p-4">Admin</td> <td class="pl-5 p-4">None</td>
                                     @endif
-                                <td></td>
+                                    @if (count($user->courses()->get()) > 0)
+                                        <td>{{$user->courses()->first()->name}}</td>
+                                    @else
+                                        <td>Yet to register a course</td>
+                                    @endif
+                                
                             </tr>
                         @endforeach
                     </tbody>
