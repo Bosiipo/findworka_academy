@@ -20,7 +20,7 @@ class CreateCoursesTable extends Migration
             $table->text('content');
             $table->unsignedBigInteger('program_id');
             $table->integer('price');
-            $table->integer('duration');
+            // $table->integer('duration');
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
             $table->timestamps();
         });
