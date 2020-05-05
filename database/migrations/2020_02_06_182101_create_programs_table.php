@@ -17,7 +17,6 @@ class CreateProgramsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('duration');
-            $table->text('description');
             $table->timestamps();
         });
     }
