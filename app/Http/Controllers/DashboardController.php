@@ -93,6 +93,8 @@ class DashboardController extends Controller
             ];
 
             return view('admin.dashboard', $data);
+        } else {
+            return view('auth.register');
         }
     }
 }
