@@ -11,7 +11,8 @@
             projects in an integrated talent and project 
             management ecosystem.</p>
         <div class="justify-content-right pt-4">
-            <a class="get-started-button btn mr-3 text-uppercase" href="{{url('/central_dashboard')}}" class="text-white text-decoration-none">Get Started</a>
+            <a class="get-started-button btn mr-3 text-uppercase text-decoration-none" href="{{url('/central_dashboard')}}">Get Started</a>
+            <a class="register-button btn mr-3 text-uppercase" href="{{url('/register')}}">Register</a>
         </div>
     </div>
 </header>
@@ -78,10 +79,10 @@
             <div class="col-lg-3 col-sm-6 my-5">
                 <div class="card border-0 card-shadow">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img src="{{URL::asset('/images/software-dev.jpg')}}" alt="" class="card-img-top embed-responsive-item">
+                        <img src="{{asset('/images/software-dev.jpg')}}" alt="" class="card-img-top embed-responsive-item">
                     </div>  
                     <div class="card-img-overlay">
-                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading"><a href="">Web development</a></h5>
+                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading">Web development</h5>
                     </div>
                     <div class="card-body pt-5">
                         Learn and sharpen your web skills.
@@ -91,11 +92,11 @@
             <div class="col-lg-3 col-sm-6 my-5">
                 <div class="card border-0 card-shadow">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img src="{{URL::asset('/images/mobile.png')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
+                        <img src="{{asset('/images/mobile.png')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
                     </div>
-                    {{-- <img src="{{URL::asset('/images/mobile-dev3.jfif')}}" alt="" class="card-img-top"> --}}
+                    {{-- <img src="{{asset('/images/mobile-dev3.jfif')}}" alt="" class="card-img-top"> --}}
                     <div class="card-img-overlay">
-                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading"><a href="">Mobile development</a></h5>
+                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading">Mobile development</h5>
                     </div>
                     <div class="card-body pt-5">
                         Learn and sharpen your mobile skills.
@@ -105,10 +106,10 @@
             <div class="col-lg-3 col-sm-6 my-5">
                 <div class="card border-0 card-shadow">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img src="{{URL::asset('/images/data-science.png')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
+                        <img src="{{asset('/images/data-science.png')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
                     </div>
                     <div class="card-img-overlay">
-                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading"><a href="">Data-science with python</a></h5>
+                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading">Data-science with python</h5>
                     </div>
                     <div class="card-body pt-5">
                         Learn how to use Python and more.
@@ -118,11 +119,11 @@
             <div class="col-lg-3 col-sm-6 my-5">
                 <div class="card border-0 card-shadow">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img src="{{URL::asset('/images/ui-ux.webp')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
+                        <img src="{{asset('/images/ui-ux.webp')}}" alt="Card image cap" class="card-img-top embed-responsive-item"/>
                     </div>
                     
                     <div class="card-img-overlay">
-                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading"><a href="">Product Design (UI/UX)</a></h5>
+                        <h5 class="text-light font-weight-bold text-uppercase p-2 heading">Product Design (UI/UX)</h5>
                     </div>
                     <div class="card-body pt-5">
                         Learn how to design beautiful apps and web pages.

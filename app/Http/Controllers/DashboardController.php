@@ -41,13 +41,8 @@ class DashboardController extends Controller
                 $user_course = $user->courses()->first()->name;
 
                 $assignments = Assignment::where('course', $user_course)->get();
-                // dd($assignments);
-                // $user_course = auth()->user()->courses()->first()->name;
-
-                // $assignments = Assignment::where('course', $user_course)->get();
 
                 $payments = Payment::where('user_id', $user->id)->get();
-
 
                 $data = [
                     'course' => $user_course,
@@ -57,16 +52,12 @@ class DashboardController extends Controller
 
                 return view('student.course.dashboard', $data);
             }
-
             // Tutor Dashboard
         } else if ($user->privilege_id == '2') {
 
-            // dd($user->courses()->get());
             $tutor_course = $user->courses()->get()->first()->name;
-            // dd($tutor);
 
             $assignments = Assignment::where('course', $tutor_course)->get();
-            // dd($assignments);
 
             $students = User::where('privilege_id', 1)->get();
 
@@ -79,22 +70,15 @@ class DashboardController extends Controller
 
             // Admin Dashboard
         } else if (auth()->user()->privilege_id == '3') {
-
-            // $admins = User::where('privilege_id', 3)->get();
-            // $tutors = User::where('privilege_id', 2)->get();
-            // $students = User::where('privilege_id', 1)->get();
-
             $users = User::all();
 
             $data = [
                 'users' => $users
-                // 'tutors' => $tutors,
-                // 'students' => $students,
             ];
 
             return view('admin.dashboard', $data);
-        } else {
-            return view('auth.register');
         }
+
+        // return view('auth.register');
     }
 }

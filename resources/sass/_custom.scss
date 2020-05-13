@@ -40,7 +40,26 @@ header {
 }
 
 .get-started-button:hover {
-    background: #f9793d;
+    background: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+.register-button {
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    // width: 130px;
+    box-shadow: 5px 8px 18px #000;
+    translate: all .2s;
+}
+
+.register-button:hover {
+    background: black;
+    color: white;
     transform: translateY(-3px);
 }
 

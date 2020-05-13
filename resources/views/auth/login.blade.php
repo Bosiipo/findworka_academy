@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="container" style="margin-bottom:100px;">
-    <div class="row justify-content-center">
-        <div class="col-md-8" style="margin-top: 90px; margin-left: 130px;">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-sm-4 justify-content-center" style="margin-top: 90px;">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -68,6 +69,7 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
 @endsection
