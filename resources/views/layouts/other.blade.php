@@ -11,7 +11,7 @@
 
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
     <script defer src="../../font-awesome/fontawesome-free-5.12.1-web/js/all.js"></script>
     {{-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> --}}
 
@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="../../font-awesome/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../font-awesome/fontawesome-free-5.12.1-web/webfonts">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     
