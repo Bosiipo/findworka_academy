@@ -12,7 +12,8 @@
 
     <!-- Scripts -->
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
-    <script defer src="../../font-awesome/fontawesome-free-5.12.1-web/js/all.js"></script>
+    {{-- <script defer src="../../font-awesome/fontawesome-free-5.12.1-web/js/all.js"></script> --}}
+    <script src="https://use.fontawesome.com/7d29d92ff9.js"></script>
     {{-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> --}}
 
     <!-- Fonts -->
@@ -20,9 +21,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="../../font-awesome/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
+    {{-- <link href="../../font-awesome/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="../../font-awesome/fontawesome-free-5.12.1-web/webfonts">
-    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
      
